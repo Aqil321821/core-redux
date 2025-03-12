@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Open Sans', serif;
+  padding: 0.5rem 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: rgb(74, 74, 74);
+}
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+@media (max-width: 492px) {
+  body {
+    padding: 0.3rem 1rem;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0.3rem 1rem;
+  }
+}

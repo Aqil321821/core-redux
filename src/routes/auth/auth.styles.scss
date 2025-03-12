@@ -1,0 +1,27 @@
+.auth-container {
+  display: flex;
+  max-width: 900px;
+  margin: 30px auto;
+  column-gap: 150px;
+  min-height: 100vh; // ✅ Instead of height: 100vh
+  overflow: visible; // ✅ Allow natural scrolling
+}
+
+@media (max-width: 750px) {
+  .auth-container {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 750px) {
+  .auth-container {
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    min-height: auto; 
+    margin-bottom: 145px;
+  }
+}

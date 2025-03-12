@@ -1,0 +1,25 @@
+.category-page-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.2rem;
+  row-gap: 1.3rem;
+}
+.heading {
+  margin-bottom: 0.7rem;
+}
+@media (max-width: 992px) {
+  .category-page-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .category-page-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .category-page-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 60px;
+  }
+}
