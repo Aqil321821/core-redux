@@ -5,12 +5,12 @@ import { SignOutUser } from '../../utils/firebase/firebase.utils';
 import CartIcon from '../cart-icon/Cart-icon.compt';
 import CartDropdown from '../cart-dropdown/Cart-dropdown.compt';
 import { CartContext } from '../../context/CartContext';
-
-// import { useUserContext } from '../../context/UserContext';
+import { useSelector } from 'react-redux';
+import { selectCurrentUser } from '../../store/user/user.selector';
 import './Nav.styles.scss';
 const Nav = () => {
   const { isCartOpen } = useContext(CartContext);
-  // const { state: { currentUser }  } = useUserContext();
+  const currentUser = useSelector(selectCurrentUser);
   return (
     <>
       <div className='navigation'>
