@@ -6,11 +6,11 @@ import CartIcon from '../cart-icon/Cart-icon.compt';
 import CartDropdown from '../cart-dropdown/Cart-dropdown.compt';
 import { CartContext } from '../../context/CartContext';
 
-import { useUserContext } from '../../context/UserContext';
+// import { useUserContext } from '../../context/UserContext';
 import './Nav.styles.scss';
 const Nav = () => {
   const { isCartOpen } = useContext(CartContext);
-  const { state: { currentUser }  } = useUserContext();
+  // const { state: { currentUser }  } = useUserContext();
   return (
     <>
       <div className='navigation'>
