@@ -11,6 +11,7 @@ import './Nav.styles.scss';
 const Nav = () => {
   const { isCartOpen } = useContext(CartContext);
   const currentUser = useSelector(selectCurrentUser);
+  
   return (
     <>
       <div className='navigation'>
