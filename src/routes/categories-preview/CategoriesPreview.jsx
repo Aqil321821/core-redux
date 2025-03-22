@@ -1,9 +1,10 @@
-import { useContext, useState, useEffect } from 'react';
-import { CategoriesContext } from '../../context/CategoriesContext';
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { selectCategoriesMap } from '../../store/categories/category.selector';
 import CategoryPreview from '../../components/category-preview-compt/CategoryPreview.compt';
 export const CategoriesPreview = () => {
-  const { categoriesMap } = useContext(CategoriesContext);
   const [error, setError] = useState(false);
+  const categoriesMap = useSelector(selectCategoriesMap);
 
   useEffect(() => {
     setTimeout(() => {
@@ -12,7 +13,7 @@ export const CategoriesPreview = () => {
       } else {
         setError(false);
       }
-    }, 3000);
+    }, 4000);
   }, [categoriesMap]);
 
   if (error) {

@@ -90,12 +90,10 @@ export const addCollectionAndDocuments = async (collectionName, ObjectsToAdd) =>
 export const getAllData = async () => {
   const dataRef = collection(db, 'categories');
   const snapshot = await getDocs(dataRef);
+  return snapshot.docs.map((doc) => doc.data());
 
-  const formattedData = snapshot.docs.reduce((acc, doc) => {
-    const { title, items } = doc.data();
-    acc[title.toLowerCase()] = items;
-    return acc;
-  }, {});
+  
+  
 
-  return formattedData;
+  // return formattedData;
 };
